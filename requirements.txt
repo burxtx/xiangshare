@@ -2,4 +2,3 @@ django==1.6.5
 evernote
 djangorestframework
 markdown
-pillow
