@@ -1,0 +1,25 @@
+{% extends "account/base.html" %}
+{% block title %}User's account{% endblock %}
+{% block head %}User's account{% endblock %}
+{% block content %}
+<form enctype="multipart/form-data" class="form-accounts" method="post" action="{% url 'account:account_page' %}">
+    {% csrf_token %}
+    <div class="form-group">
+        <div>
+        <img class="avatar" src="{{ account.avatar }}" alt="avatar">
+        </div>
+        <input class="form-control" id="{{ form.avatar.id_for_label }}" data-filetype-ok="I am sorry" data-filetype-error="That's not even an image..." data-filesize-ok="Fine" data-filesize-error="That's terrifyingly large!<br />Try making it 10 MB or less." name="{{ form.avatar.html_name }}" type="file" accept="image/*">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="id_username">Username:</label>
+        <input class="form-control" id="{{ form.username.id_for_label }}" name="{{ form.username.html_name }}" type="text" maxlength="30"  required="" placeholder="Username" value="{{ form.username.value }}">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="id_introduction">Introduction:</label>
+        <textarea class="form-control" id="{{ form.introduction.id_for_label }}" name="{{ form.introduction.html_name }}" placeholder="Introduction" >{{form.introduction.value|default:""}}</textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Save</button>
+    </div>
+</form>
+{% endblock %}

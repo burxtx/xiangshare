@@ -1,0 +1,64 @@
+/*h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+body {
+    color: #555555;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+.blogpost-title {
+	font-size: 40px;
+}
+.title {
+    font-size: 60px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.page-header{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+*/
+.errorlist{
+	color: red;
+}
+#tag-cloud{
+	text-align: center;
+}
+#tag-cloud a{
+	margin: 0 0.2em;
+}
+.tag-cloud-0{font-size: 100%;}
+.tag-cloud-1{font-size: 120%;}
+.tag-cloud-2{font-size: 140%;}
+.tag-cloud-3{font-size: 160%;}
+.tag-cloud-4{font-size: 180%;}
+.tag-cloud-5{font-size: 200%;}
+
+.post-item{
+	display:block;
+	/*padding-bottom:30px;*/
+}
+
+.post-tag{
+	display:inline-block;
+	color: #B3B3B1;
+	margin-right: 7px;
+}
+
+.post.tool, .metadata{
+/*	float: right;
+	position: relative;*/
+	/*margin-left: 20px;*/
+	/*display:inline-block;*/
+	/*color: #B3B3B1;*/
+	/*color: #A8B1BA;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    min-height: 22px;
+    text-align: right;*/
+}

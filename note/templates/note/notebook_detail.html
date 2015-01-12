@@ -1,0 +1,10 @@
+{% extends "note/base.html" %}
+{% block content %}
+<div>
+    {% for note in notes %}
+        <div>
+            <a href="{% url 'note:note_detail' %}?note={{note.guid}}">{{note.title}}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

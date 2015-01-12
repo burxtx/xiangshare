@@ -1,0 +1,27 @@
+{% extends "account/base.html" %}
+{% block title %}User Registration{% endblock %}
+{% block head %}User Registration{% endblock %}
+{% block content %}
+<form class="form-signin" method="post" action=".">
+    {% csrf_token %}
+    <div class="form-group">
+        <label class="control-label" for="id_username">Username:</label>
+        <input class="form-control" id="{{ form.username.id_for_label }}" name="{{ form.username.html_name }}" type="text" maxlength="30" autofocus="" required="" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="id_email">Email:</label>
+        <input class="form-control" id="{{ form.email.id_for_label }}" name="{{ form.email.html_name }}" type="email" autofocus="" required="" placeholder="Email address">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="id_password1">Password:</label>
+        <input class="form-control" id="{{ form.password1.id_for_label }}" name="{{ form.password1.html_name }}" type="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="id_password2">Password(Again):</label>
+        <input class="form-control" id="{{ form.password2.id_for_label }}" name="{{ form.password2.html_name }}" type="password" placeholder="Password again">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-lg btn-primary btn-block" value="Register">Register</button>
+    </div>
+</form>
+{% endblock %}
